@@ -1,7 +1,9 @@
 image:
   file: .gitpod.dockerfile
 tasks:
-  - init: yarn
+  - init: |
+      nvm install 10
+      yarn
     command: |
       gp sync-done init
       cd jsonschema-form-extension
